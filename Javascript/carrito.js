@@ -4,7 +4,7 @@ let insumosElegidos = document.getElementById("sec-insumos");
 let carritoElegidos = document.getElementById("sec-carrito");
 
 let compraTotal = document.createElement("div");
-compraTotal.innerHTML = "<h1> Precio total: $</h2>";
+compraTotal.innerHTML = "<h2> Precio total: $</h2>";
 carritoElegidos.appendChild(compraTotal);
 
 let precioTotal = document.createElement("h2");
@@ -60,13 +60,15 @@ function sumaDeTotalCarrito(){
 
 for (const insumo of insumos){
     let containerGeneral = document.createElement("div");
-    containerGeneral.setAttribute("class", "card-product");
+    containerGeneral.setAttribute("class", "card card-product");
+    containerGeneral.style.width = "18rem";
     containerGeneral.innerHTML = ` <div class="img-container">
                                    <img src="${insumo.foto}" alt=${insumo.nombre}" class="img-insumo"/>
                                    </div>
                                    <div class= "info-insumo">
                                    <p class="font">${insumo.nombre}</p>
-                                   <strong class="font">${insumo.precio}</strong>
+                                   <strong class="font">$${insumo.precio}</strong>
+                                   <br>
                                    <button class= "boton" id="${insumo.id}"> Agregar </button>
                                    </div>`;
                                    insumosElegidos.appendChild(containerGeneral);

@@ -10,9 +10,7 @@
     --color-lila: #c3acb8;
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
-
-#container-general {
+#container {
     display: flex;
     flex-direction: row;
 }
@@ -26,9 +24,13 @@
 }
 
 .card-product {
-    width: 40%;
-    margin: 20px;
+    width: 10%;
+    margin: 10px;
     text-align: center;
+}
+
+.card-product:hover {
+  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
 }
 
 .font {
@@ -79,8 +81,12 @@
     top: 10px;
 }
 
-#section-carrito div {
+#sec-carrito div {
     display: flex;
     justify-content: center;
     margin: 10px;
 }
+
+#sec-carrito:hover {
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+  }
